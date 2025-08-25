@@ -1,8 +1,8 @@
-
 # 📚 Lança Nota – Sistema de Lançamento de Notas
 
 Um sistema web fullstack para **lançamento, consulta e gerenciamento de notas de alunos**, desenvolvido com **Go (Gin + GORM)** no backend e **Next.js (React + TypeScript)** no frontend.  
 
+---
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -19,6 +19,7 @@ Um sistema web fullstack para **lançamento, consulta e gerenciamento de notas d
 - [Axios](https://axios-http.com/) para requisições HTTP  
 - TailwindCSS para estilização  
 
+---
 
 ## ✨ Funcionalidades
 
@@ -31,21 +32,22 @@ Um sistema web fullstack para **lançamento, consulta e gerenciamento de notas d
 - ✅ Validações de notas (limite de 0 a 10/20 conforme curso)  
 - 🟢 Status visual de cada aluno (aprovado, recuperação, reprovado)  
 
+---
 
 ## 🏗️ Estrutura do Projeto
 
 
 lanca-nota/
-│── config/              # Configurações do backend
-│── controllers/         # Controllers da API em Go
-│── data/                # Estruturas auxiliares
-│── database/            # Configuração do banco de dados
-│── models/              # Modelos GORM
-│── routes/              # Rotas da API Gin
-│── services/            # Lógica de negócio
-│── lancar-nota-front\_end-nextjs/   # Aplicação Next.js
-│── main.go              # Entry point do backend
-│── go.mod / go.sum      # Dependências Go
+│── config/ # Configurações do backend
+│── controllers/ # Controllers da API em Go
+│── data/ # Estruturas auxiliares
+│── database/ # Configuração do banco de dados
+│── models/ # Modelos GORM
+│── routes/ # Rotas da API Gin
+│── services/ # Lógica de negócio
+│── lancar-nota-front_end-nextjs/ # Aplicação Next.js
+│── main.go # Entry point do backend
+│── go.mod / go.sum # Dependências Go
 
 
 
@@ -61,7 +63,7 @@ go mod tidy
 
 # rodar servidor backend
 go run main.go
-````
+
 
 Servidor sobe em: **[http://localhost:8080](http://localhost:8080)**
 
