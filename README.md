@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 📚 Lança Nota – Sistema de Lançamento de Notas
 
-First, run the development server:
+Um sistema web fullstack para **lançamento, consulta e gerenciamento de notas de alunos**, desenvolvido com **Go (Gin + GORM)** no backend e **Next.js (React + TypeScript)** no frontend.  
 
+
+## 🚀 Tecnologias Utilizadas
+
+### Backend
+- [Go](https://go.dev/)  
+- [Gin](https://gin-gonic.com/) – Web Framework  
+- [GORM](https://gorm.io/) – ORM para banco de dados  
+- REST API para comunicação com o frontend  
+
+### Frontend
+- [Next.js](https://nextjs.org/)  
+- [React](https://react.dev/)  
+- [TypeScript](https://www.typescriptlang.org/)  
+- [Axios](https://axios-http.com/) para requisições HTTP  
+- TailwindCSS para estilização  
+
+
+## ✨ Funcionalidades
+
+- 🔍 Buscar cursos e disciplinas disponíveis  
+- 📝 Lançamento de notas por aluno e por trimestre  
+- 📊 Cálculo automático das médias (trimestral, final e de frequência)  
+- 💾 Salvamento individual ou em lote  
+- ⚡ Cache local (localStorage) para evitar perda de dados  
+- 🔔 Sistema de notificações (sucesso, erro e avisos)  
+- ✅ Validações de notas (limite de 0 a 10/20 conforme curso)  
+- 🟢 Status visual de cada aluno (aprovado, recuperação, reprovado)  
+
+
+## 🏗️ Estrutura do Projeto
+
+
+lanca-nota/
+│── config/              # Configurações do backend
+│── controllers/         # Controllers da API em Go
+│── data/                # Estruturas auxiliares
+│── database/            # Configuração do banco de dados
+│── models/              # Modelos GORM
+│── routes/              # Rotas da API Gin
+│── services/            # Lógica de negócio
+│── lancar-nota-front\_end-nextjs/   # Aplicação Next.js
+│── main.go              # Entry point do backend
+│── go.mod / go.sum      # Dependências Go
+
+
+
+## ⚙️ Como Rodar o Projeto
+
+### Backend (Go)
 ```bash
+# entre na pasta raiz
+cd lanca-nota
+
+# instalar dependências
+go mod tidy
+
+# rodar servidor backend
+go run main.go
+````
+
+Servidor sobe em: **[http://localhost:8080](http://localhost:8080)**
+
+
+### Frontend (Next.js)
+
+**bash**
+# entrar na pasta do frontend
+cd lancar-nota-front_end-nextjs
+
+# instalar dependências
+npm install
+
+# rodar servidor frontend
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Servidor sobe em: **[http://localhost:3000](http://localhost:3000)**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📷 Preview do Sistema
 
-To learn more about Next.js, take a look at the following resources:
+* Tela principal: seleção de curso e disciplina
+* Tabela de alunos com campos editáveis para notas
+* Notificações de sucesso/erro ao salvar
+* Indicação visual de aprovação, recuperação ou reprovação
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📌 Próximos Passos
 
-## Deploy on Vercel
+* [ ] Autenticação de professores/administradores
+* [ ] Relatórios em PDF/Excel
+* [ ] Controle de permissões por disciplina
+* [ ] Deploy em ambiente cloud (Heroku, Railway ou Vercel)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 👨‍💻 Autor
+
+Projeto desenvolvido no curso de Go + Next.js para gestão acadêmica.
+
+
+
